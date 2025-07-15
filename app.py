@@ -3,9 +3,7 @@ import streamlit as st
 import pickle
 import pandas
 st.title('Movie Recommender System')
-
-similarity = pickle.load(open('similaritygit init
-.pkl', 'rb'))
+similarity = pickle.load(open('similarity.pkl', 'rb'))
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity[movie_index]
